@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/dracula.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +16,129 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h3>CAMINHO DAS PEDRAS</h3>
+					<p style="font-style: italic;">por luiz lins</p>
+				</section>
+				<section data-background="./images/mapa-global.png">
+					<p class="fragment" style="position: relative; top: 500px; background-color: rgb(132, 182, 206);">
+						SERVIDORES RAÍZ DE <strong>DNS</strong> GLOBAL
+					</p>
+				</section>
+				<section>
+					<section data-background-color="#000">
+						<img data-src="./images/hosts.png" alt="">
+					</section>
+					<section data-background-color="#000">
+						<img data-src="./images/lista-hosts.png" alt="">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>DNS</h2>
+						<p>Domain Name System</p>
+					</section>
+					<section data-background-color="#000">
+						<img data-src="./images/nome-ip.png" alt="">
+						<h2>www.<strong>cajutec.com.br</strong></h2>
+						<p>162.214.201.16</p>
+					</section>
+					<section>
+						<h2>Tarefa no terminal</h2>
+						<p>host <strong>cajutec.com.br</strong></p>
+						<p class="fragment">vamos tentar o google?</p>
+					</section>
+					<section data-background="./images/pra-onde-ir.png">
+						<p style="position: relative; top: 500px; background-color: rgb(132, 182, 206);">
+							cajutec.com.br -> 162.214.201.16 <br> <strong>(NOT WORKING)</strong>
+						</p>
+					</section>
+					<section>
+						<img data-src="./images/hierarquia.png" alt="" width="500">
+						<p>Hierarquia root dos DNS</p>
+						<p>Vamos ao google digitar: root servers</p>
+					</section>
+					<section data-background="./images/tuvalu.png">
+						<p style="position: relative; top: 500px; background-color: rgb(20, 121, 79); font-size: 32px;">
+							Tuvalu.tv (.TLD), 10% renda passiva, 5 milhões de dólares/ano.
+						</p>
+					</section>
+				</section>
+				<section data-background-color="#000">
+					<div style="position: relative; width: 100%;">
+						<div style="position: absolute; top: 100px; left: 0; font-size: 0.5em;">
+							<p>www.cajutec.com.br</p>
+							<p data-fragment-index="9" class="fragment fade-out">?.?.?.?</p>
+							<p data-fragment-index="10" class="fragment" style="font-size: 1.5em; color: #FF0000;">162.214.201.16</p>
+						</div>
+						<div data-fragment-index="1" class="fragment" style="position: absolute; top: 100px; left: 230px; width: 50px;">
+							<img data-src="./images/seta.png" alt="">
+						</div>
+						<div  data-fragment-index="2" class="fragment" style="position: absolute; top: 30px; left: 280px; font-size: 0.5em; width: 80px;">
+							<img data-src="./images/dns.png" alt="" style="position: absolute; top: 50%; left: 90%;">
+							<p style="position: relative; top: 100px; left: 30px; font-size: 1em;">www.cajutec.com.br</p>
+						</div>	
+						<div  data-fragment-index="3" class="fragment" style="position: absolute; top: 20px; left: 520px; width: 70px; transform: rotate(-20deg);">
+							<img data-src="./images/seta.png" alt="">
+						</div>
+						<div  data-fragment-index="4" class="fragment" style="position: absolute; top: -100px; left: 600px; font-size: 0.5em; width: 150px;">
+							<img data-src="./images/dns.png" alt="" style="position: absolute; top: 50%; left: 50%;">
+							<p style="position: relative; top: 100px; left: 30px; font-size: 0.5em;">ROOT SERVER (.)</p>
+						</div>
+						<div data-fragment-index="5" class="fragment" style="position: absolute; top: 100px; left: 520px; width: 70px;">
+							<img data-src="./images/seta.png" alt="">
+						</div>
+						<div data-fragment-index="6" class="fragment" style="position: absolute; top: 45px; left: 600px; font-size: 0.5em; width: 150px;">
+							<img data-src="./images/dns.png" alt="" style="position: absolute; top: 50%; left: 50%;">
+							<p style="position: relative; top: 100px; left: 30px; font-size: 0.5em;">DNS AUTORITATIVO (.BR) </p>
+						</div>
+						<div data-fragment-index="7" class="fragment" style="position: absolute; top: 180px; left: 520px; width: 70px; transform: rotate(20deg);">
+							<img data-src="./images/seta.png" alt="">
+						</div>
+						<div data-fragment-index="8" class="fragment" style="position: absolute; top: 175px; left: 600px; font-size: 0.5em; width: 150px;">
+							<img data-src="./images/dns.png" alt="" style="position: absolute; top: 50%; left: 50%;">
+							<p style="position: relative; top: 100px; left: 30px; font-size: 0.5em;">DNS AUTORITATIVO (CAJUTEC.COM.BR) </p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<section>
+						<h2>E agora?</h2>
+					</section>
+					<section>
+						<h2>Tarefa no terminal</h2>
+						<p class="fragment fade-in-then-out">dig</p>
+						<p class="fragment fade-in-then-out">dig <strong>cajutec.com.br</strong></p>
+						<p class="fragment fade-in">dig <span style="color: red;">+trace</span> <strong>cajutec.com.br</strong></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>E o tal DNS reverso?</h2>
+					</section>
+					<section>
+						<h2>Tarefa no terminal</h2>
+						<p class="fragment fade-in-then-out">traceroute</p>
+						<p class="fragment fade-in-then-out">traceroute <strong>cajutec.com.br</strong></p>
+						<p class="fragment fade-in">dig <span style="color: red;">-x</span> <strong>MEU IP LOCAL</strong></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>E o tal caminho das pedras?</h2>
+					</section>
+					<section>
+						<p class="fragment">A: IPv4</p>
+						<p class="fragment">AAAA: IPv6</p>
+						<p class="fragment">host -t A domínio</p>
+						<p class="fragment">host -t NS domínio</p>
+						<p class="fragment">host -t MX domínio</p>
+						<p class="fragment">sudo apt-get install dnsutils</p>
+						<p class="fragment">cat /etc/resolv.conf</p>
+						<p class="fragment">dig soa cajutec.com.br</p>
+						<p class="fragment">dig @8.8.8.8 cajutec.com.br</p>
+					</section>
+				</section>
 			</div>
 		</div>
 
